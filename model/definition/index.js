@@ -20,8 +20,8 @@ const models = {
 // relation
 
 // // user-teacher (1:1)
-User.hasOne(Teacher, { onDelete: "CASCADE", foreignKey: "userId" });
-Teacher.belongsTo(User, { onDelete: "CASCADE", foreignKey: "userId" });
+// User.hasOne(Teacher, { onDelete: "CASCADE", foreignKey: "userId" });
+// Teacher.belongsTo(User, { onDelete: "CASCADE", foreignKey: "userId" });
 
 // // user-student (1:1)
 User.hasOne(Student, { onDelete: "CASCADE", foreignKey: "studentId" });

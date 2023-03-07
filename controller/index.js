@@ -15,11 +15,11 @@ deleteUser: require("./users/deleteUser"),
 // deleteTeacher: require("./teachers/deleteTeacher"),
 
 // //studentWorking
-// createStudent:require("./students/createStudent"),
-// getStudent: require("./students/getStudent"),
+createStudent:require("./students/createStudent"),
+getStudent: require("./students/getStudent"),
 // getStudentById: require("./students/getStudentById"),
-// updateStudent: require("./students/updateStudent"),
-// deleteStudent: require("./students/deleteStudent"),
+updateStudent: require("./students/updateStudent"),
+deleteStudent: require("./students/deleteStudent"),
 
 // //courseWorking
 // createCourse:require("./courses/createCourse"),

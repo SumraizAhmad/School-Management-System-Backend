@@ -11,7 +11,7 @@ Student.init(
       allowNull: false,
       type: DataTypes.INTEGER,
     },
-    registrationNumber: {
+    regNumber: {
       allowNull: false,
       type: DataTypes.STRING(),
     },
