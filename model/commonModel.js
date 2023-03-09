@@ -12,6 +12,7 @@ module.exports = {
         email: body.email,
       },
     });
+    
     if (!user) {
       return "invalid username/password";
     }
