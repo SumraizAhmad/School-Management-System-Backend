@@ -31,6 +31,15 @@ module.exports = {
 
     return result;
   },
+  getStudentById: async function (id) {
+    const result = await models.Student.findAll({
+      where: { id: id },
+      include:{
+        model:models.User,
+      },
+    });
+    return result;
+  },
   updateStudent: async function (data) {
     try {
       const student = await models.Student.findByPk(data.id);
@@ -59,13 +68,16 @@ module.exports = {
     }
   },
 
-  deleteStudent: async function (id) {
-    // const user= await models.User.findByPk(id);
-    // if(user.role=="user")
-		const result = await models.Student.destroy({
-			where: { id: id },
-		});
-		return result;
-	},
+  deleteStudent: async function (ids) {
+    const result= await models.Student.findByPk(ids);
+    console.log(result);
+    const removeUser=await models.User.destroy({
+      where:{id: result.dataValues.studentId}
+    })
 
+    const removeStudent= await models.Student.destroy({
+      where:{id:ids}
+    })
+    return "student Deleted";
+  },
 };

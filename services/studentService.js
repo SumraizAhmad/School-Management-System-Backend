@@ -10,15 +10,19 @@ module.exports = {
     const data = await studentModel.getStudent(body);
     return data;
   },
+  getStudentById: async function (id) {
+    const data = await studentModel.getStudentById(id);
+    return data;
+  },
   updateStudent: async function (body) {
     const data = await studentModel.updateStudent(body);
     return data;
   },
   deleteStudent: async function (id) {
     const student = await studentModel.getStudentById(id);
-    if (student.count != 0) {
-      return "Student already exists!";
-    }
+    // if (student.count != 0) {
+    //   return "Student already exists!";
+    // }
     const data = await studentModel.deleteStudent(id);
 
     return data;

@@ -1,10 +1,13 @@
 {
-    "db": {
-        "database":"sms",
-        "username":"postgres",
-        "password":"admin",
-        "logging":false,
-        "host":"localhost",
-        "dialect":"postgres"
-    }
+  "db": {
+    "database": "sms",
+    "username": "postgres",
+    "password": "admin",
+    "logging": false,
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "jwt": {
+    "secret": "c1eb8bb5272a7829e188e45bf76dfaab282b270ce6a700692b8759c2d28a08fb3b074ce7fd8699b5fb9658c82951a10c7aafa770602e31305e7650e730e8dced"
+  }
 }
